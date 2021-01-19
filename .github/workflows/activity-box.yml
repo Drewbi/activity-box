@@ -2,7 +2,7 @@ name: Activity Box
 
 on:
   schedule:
-    - cron: '@hourly'
+    - cron: '0 * * * *'
 
 jobs:
   build:
