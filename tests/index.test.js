@@ -68,19 +68,19 @@ describe('activity-box', () => {
     }
   })
 
-  // it('updates the Gist with the expected string', async () => {
-  //   await action(tools)
-  //   expect(GistBox.prototype.update).toHaveBeenCalled()
-  //   expect(GistBox.prototype.update.mock.calls[0][0]).toMatchSnapshot()
-  // })
+  it('updates the Gist with the expected string', async () => {
+    await action(tools)
+    expect(GistBox.prototype.update).toHaveBeenCalled()
+    expect(GistBox.prototype.update.mock.calls[0][0]).toMatchSnapshot()
+  })
 
-  // it('handles failure to update the Gist', async () => {
-  //   GistBox.prototype.update.mockImplementationOnce(() => {
-  //     throw new Error(404)
-  //   })
+  it('handles failure to update the Gist', async () => {
+    GistBox.prototype.update.mockImplementationOnce(() => {
+      throw new Error(404)
+    })
 
-  //   await action(tools)
-  //   expect(tools.exit.failure).toHaveBeenCalled()
-  //   expect(tools.exit.failure.mock.calls).toMatchSnapshot()
-  // })
+    await action(tools)
+    expect(tools.exit.failure).toHaveBeenCalled()
+    expect(tools.exit.failure.mock.calls).toMatchSnapshot()
+  })
 })
