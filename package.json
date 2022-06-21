@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Adds your recent activity to a github gist",
   "scripts": {
-    "test": "echo 'no testing'",
+    "test": "jest --coverage",
     "format": "prettier --write ./index.js"
   },
   "repository": {
