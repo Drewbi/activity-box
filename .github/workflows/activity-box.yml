@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: Drewbi/activity-box@master
-        env:
+        with:
           GH_PAT: ${{ secrets.GH_PAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USERNAME: Drewbi
