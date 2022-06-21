@@ -1,5 +1,5 @@
-const core = require('@actions/core')
-const github = require('@actions/github')
+import core from '@actions/core'
+import github from '@actions/github'
 // import { graphql } from "@octokit/graphql"
 
 // const { Toolkit } = require('actions-toolkit')
